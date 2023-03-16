@@ -55,6 +55,7 @@
     "ngx-quill": "^19.0.1",
     "ngx-sortablejs": "^11.1.0",
     "quill": "^1.3.7",
+    "remixicon": "^2.5.0",
     "rtlcss-webpack-plugin": "^4.0.7",
     "rxjs": "~7.5.0",
     "simple-datatables": "^4.0.8",
