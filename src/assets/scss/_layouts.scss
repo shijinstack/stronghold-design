@@ -211,6 +211,10 @@
     display: none;
 }
 
+.auth_logo img {
+    max-width: 200px;
+}
+
 @media screen and (max-width: 1270px) {
     .container {
         max-width: calc(100% - 0.75rem);
