@@ -225,7 +225,7 @@
         <div class="container">
 
             <!--- Menu -->
-            <ul class="nav page-navigation">
+            <ul class="nav page-navigation flex-grow-1">
                 <ng-container *ngFor="let item of menuItems">
 
                     <li class="nav-item" [routerLinkActive]="['active']" *ngIf="!item.isMegaMenu">
@@ -280,6 +280,31 @@
                     </li>
                 </ng-container>
             </ul>
+
+            <div class="industry">
+                <span class="industry_label">Choose Industry</span>
+                <div ngbDropdown placement="bottom-end" class="btn-group">
+                    <button class="btn btn-primary" id="dropupMenu" ngbDropdownToggle>
+                      Refinery Data
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                        <button class="dropdown-item active">Refinery Data</button>
+                        <button class="dropdown-item">Petrochemical Data</button>
+                        <button class="dropdown-item">Fertilizer Data</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
+</div>
+
+<div ngbDropdown placement="top-end" class="btn-group mob_industry">
+    <button class="btn btn-primary" id="dropupMenu2" ngbDropdownToggle>
+    Refinery Data
+  </button>
+    <div ngbDropdownMenu aria-labelledby="dropupMenu2">
+        <button class="dropdown-item active">Refinery Data</button>
+        <button class="dropdown-item">Petrochemical Data</button>
+        <button class="dropdown-item">Fertilizer Data</button>
+    </div>
 </div>
