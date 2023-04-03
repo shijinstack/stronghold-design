@@ -1,1 +1,39 @@
-// Write your custom css/scss here
+.modal_right {
+    display: flex !important;
+    justify-content: flex-end !important;
+    .modal-dialog {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+        min-height: 100%;
+    }
+    .modal-fullscreen {
+        max-width: 820px;
+        position: fixed;
+        right: -10px;
+    }
+}
+
+.modal_right.fade {
+    opacity: 1 !important;
+}
+
+.modal_right.fade .modal-dialog {
+    transform: none;
+    -webkit-transition: opacity 0.05s linear, right 0.05s ease-out;
+    -moz-transition: opacity 0.05s linear, right 0.05s ease-out;
+    -o-transition: opacity 0.05s linear, right 0.05s ease-out;
+    transition: opacity 0.05s linear, right 0.05s ease-out !important;
+}
+
+.modal_right.fade {
+    transition: none !important;
+}
+
+.modal_right.fade.show .modal-dialog {
+    right: -0px;
+    -webkit-transition: opacity 0.05s linear, right 0.05s ease-out;
+    -moz-transition: opacity 0.05s linear, right 0.05s ease-out;
+    -o-transition: opacity 0.05s linear, right 0.05s ease-out;
+    transition: opacity 0.05s linear, right 0.05s ease-out !important;
+}

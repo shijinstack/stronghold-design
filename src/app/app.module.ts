@@ -11,11 +11,13 @@ import { AppComponent } from './app.component';
 import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
 
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { PortalUsersComponent } from './views/pages/portal-users/portal-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
+    PortalUsersComponent,
   ],
   imports: [
     BrowserModule,
