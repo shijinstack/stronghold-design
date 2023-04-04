@@ -281,7 +281,8 @@
                 </ng-container>
             </ul>
 
-            <div class="industry">
+
+            <div class="industry" *ngIf="industry">
                 <span class="industry_label">Choose Industry</span>
                 <div ngbDropdown placement="bottom-end" class="btn-group">
                     <button class="btn btn-primary" id="dropupMenu" ngbDropdownToggle>

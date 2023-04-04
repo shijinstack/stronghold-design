@@ -69,6 +69,22 @@ th {
     padding: 0.7rem 0.85rem;
 }
 
+.table thead th a {
+    color: #7987a1;
+}
+
+td .dropdown-toggle.btn.btn-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #eff1f5;
+    color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
+}
+
+td .dropdown-toggle.btn.btn-icon::after {
+    display: none;
+}
+
 .user_media {
     gap: 0.5rem;
     .user_icon {
@@ -109,4 +125,12 @@ th {
 
 .color_6 {
     background-color: #b897fa !important;
+}
+
+.table_head {
+    display: flex;
+    align-items: center;
+    .dataTable-top {
+        flex: 1;
+    }
 }

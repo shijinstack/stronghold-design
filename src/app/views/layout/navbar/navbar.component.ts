@@ -13,6 +13,7 @@ import { MenuItem } from './menu.model';
 export class NavbarComponent implements OnInit {
 
   menuItems: MenuItem[] = [];
+  industry = false;
 
   /**
   * Fixed header menu on scroll
@@ -31,12 +32,18 @@ export class NavbarComponent implements OnInit {
   constructor(
     @Inject(DOCUMENT) private document: Document, 
     private renderer: Renderer2,
-    private router: Router
+    private router: Router,
+    
   ) { }
 
   ngOnInit(): void {
     this.menuItems = MENU;
 
+    if (this.router.url.includes('/dashboard')) {
+      this.industry = true;
+      
+    }
+    // console.log(this.router.url)
     /**
     * closing the header menu after route change in tablet/mobile devices
     */
@@ -76,4 +83,5 @@ export class NavbarComponent implements OnInit {
     document.querySelector('.horizontal-menu .bottom-navbar')!.classList.toggle('header-toggled');
   }
 
+  
 }

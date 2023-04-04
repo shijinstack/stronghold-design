@@ -10,6 +10,10 @@ import { DataTable } from "simple-datatables";
 })
 export class PortalUsersComponent implements OnInit {
 
+  simpleItems: any = [];
+  selectedSimpleItem: any = null;
+  
+
   // Variables for data tables
   // Table headers
   headers = [
@@ -183,7 +187,9 @@ export class PortalUsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadingIndicator = false;
-    const dataTable = new DataTable("#dataTableExample");
+    // const dataTable = new DataTable("#dataTableExample");
+
+    this.simpleItems = ['Admin', 'User', 'Reporter'];
   }
 
 }

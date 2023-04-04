@@ -9,42 +9,14 @@ export const MENU: MenuItem[] = [
   {
     label: 'Companies',
     icon: 'command',
-    subMenus: [
-      {
-        subMenuItems: [
-          {
-            label: 'Menu Item 1',
-            link: '/menu-item-1',
-          },
-          {
-            label: 'Menu Item 2',
-            link: '/menu-item-2',
-          }
-        ]
-      }
-    ]
   },
   {
     label: 'Representative',
     icon: 'users',
-    subMenus: [
-      {
-        subMenuItems: [
-          {
-            label: 'Menu Item 1',
-            link: '/menu-item-1',
-          },
-          {
-            label: 'Menu Item 2',
-            link: '/menu-item-2',
-          }
-        ]
-      }
-    ]
   },
   {
     label: 'Portal User',
     icon: 'settings',
-    link: '/menu-item-3'
+    link: '/portal-users'
   },
 ];
