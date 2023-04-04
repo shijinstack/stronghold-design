@@ -15,14 +15,44 @@
 
 <ng-template #verticalCenteredModal let-modal>
     <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
         <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <p>Modal body</p>
+        <form class="forms-wrap">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="input1" class="form-label">First Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="input1" autocomplete="off" placeholder="first name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="input2" class="form-label">Last Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="input2" autocomplete="off" placeholder="last name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="input3" class="form-label">Email Address <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="input3" autocomplete="off" placeholder="email id">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="input4" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="input4" autocomplete="off" placeholder="phone number">
+                    </div>
+                </div>
+            </div>
+
+        </form>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
-        <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Save changes</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Add User</button>
     </div>
 </ng-template>

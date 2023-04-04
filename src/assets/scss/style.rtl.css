@@ -54,7 +54,7 @@
     --bs-black-rgb: 0, 0, 0;
     --bs-body-color-rgb: 0, 0, 0;
     --bs-body-bg-rgb: 249, 250, 251;
-    --bs-font-sans-serif: 'IBM Plex Sans', sans-serif;
+    --bs-font-sans-serif: 'Jost', sans-serif;
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     --bs-body-font-family: var(--bs-font-sans-serif);
@@ -19720,7 +19720,7 @@ pre {
 
 code {
     padding: 5px;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     border-radius: 4px;
@@ -20120,14 +20120,14 @@ body {
 .main-content .highlight pre {
     padding: 15px;
     font-size: 0.875rem;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
     background: transparent;
     line-height: 1.4;
     margin: 0;
 }
 
 .main-content .highlight pre code {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
     padding: 0;
     tab-size: 6;
     color: #000;
@@ -23550,7 +23550,7 @@ div.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title {
 }
 
 div.apexcharts-canvas .apexcharts-tooltip * {
-    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-family: 'Jost', sans-serif !important;
 }
 
 div.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active,
