@@ -1,6 +1,17 @@
-<p>portal-users works!</p>
-<button type="button" class="btn btn-primary" (click)="openVerticalCenteredModal(verticalCenteredModal)">Add User</button>
-
+<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin page_title">
+    <div>
+        <nav class="page-breadcrumb mb-1">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a routerLink=".">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Portal User</li>
+            </ol>
+        </nav>
+        <h3 class="mb-3 mb-md-0 page_title">Portal User</h3>
+    </div>
+    <div class="d-flex align-items-center flex-wrap text-nowrap title_action">
+        <button type="button" class="btn btn-primary" (click)="openVerticalCenteredModal(verticalCenteredModal)">Add User</button>
+    </div>
+</div>
 
 <ng-template #verticalCenteredModal let-modal>
     <div class="modal-header">
