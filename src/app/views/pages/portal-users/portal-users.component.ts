@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ColumnMode, TableColumn } from '@swimlane/ngx-datatable';
+import { DataTable } from "simple-datatables";
 
 @Component({
   selector: 'app-portal-users',
@@ -182,6 +183,7 @@ export class PortalUsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadingIndicator = false;
+    const dataTable = new DataTable("#dataTableExample");
   }
 
 }

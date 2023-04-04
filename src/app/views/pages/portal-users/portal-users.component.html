@@ -8,44 +8,293 @@
         </nav>
         <h3 class="mb-3 mb-md-0 page_title">Portal User</h3>
     </div>
-    <div class="d-flex align-items-center flex-wrap text-nowrap title_action">
-        <button type="button" class="btn btn-primary" (click)="openVerticalCenteredModal(verticalCenteredModal)">Add User</button>
+    <div class="d-flex align-items-center flex-wrap text-nowrap title_action gap-1">
+        <button type="button" class="btn btn-outline-primary btn-icon-text dashfilter">
+            <i class="ri-filter-3-line"></i>
+            Filter
+        </button>
+        <button type="button" class="btn btn-primary" (click)="openVerticalCenteredModal(verticalCenteredModal)">
+            <i class="ri-add-line"></i>
+            Add User
+        </button>
     </div>
 </div>
 
-<div class="row">
-  <div class="col-md-3">
-    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="search" (keyup)="false"
-      (paste)="false" />
-  </div>
-  <div class="col-md-2">
-    <select class="form-control" [(ngModel)]="limit" (change)="false">
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="20">20</option>
-      <option value="50">50</option>
-    </select>
-  </div>
-</div>
-<div class="table-responsive">
-  <ngx-datatable class="bootstrap" [columns]="headers" [columnMode]="ColumnMode.force" [footerHeight]="50" [limit]="10"
-    rowHeight="auto" [loadingIndicator]="loadingIndicator" [limit]="limit" [rows]="rows" [count]="rows.length"
-    [externalSorting]="false" [externalPaging]="false" (sort)="false" (page)="false">
-    <ngx-datatable-column *ngFor="let col of headers" [name]="col.name" [sortable]="col.sortable" [prop]="col.prop">
-    </ngx-datatable-column>
-    <ngx-datatable-column name="Actions" [sortable]="false" prop="name">
-      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-        <a class="btn icon-btn text-danger" (click)="false" [ngbTooltip]="'Delete User'">
-          <i class="feather icon-user-x"></i>
-        </a>
-      </ng-template>
-    </ngx-datatable-column>
-  </ngx-datatable>
+
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-title">Portal User List</h6>
+        <div class="table-responsive">
+            <table id="dataTableExample" class="table">
+                <thead>
+                    <tr>
+                        <th>Sl.No</th>
+                        <th>Name</th>
+                        <th>Email Address</th>
+                        <th>Phone Number</th>
+                        <th>Role</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#01</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center">
+                                <div class="user_icon color_1">
+                                    <span>LP</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Leonardo Payne</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>leonardopayne@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>Admin</td>
+                        <td>
+                            <div ngbDropdown>
+                                <button class="btn btn-secondary" id="dropdownBasic1" ngbDropdownToggle>Dropdown button</button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button ngbDropdownItem>Action - 1</button>
+                                    <button ngbDropdownItem>Another Action</button>
+                                    <button ngbDropdownItem>Something else is here</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user_media d-flex align-items-center">
+                                <div class="user_icon color_2">
+                                    <span>GW</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Garrett Winters</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>63</td>
+                        <td>2011/07/25</td>
+                        <td>$170,750</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user_media d-flex align-items-center">
+                                <div class="user_icon color_3">
+                                    <span>AC</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Ashton Cox</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Junior Technical Author</td>
+                        <td>San Francisco</td>
+                        <td>66</td>
+                        <td>2009/01/12</td>
+                        <td>$86,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user_media d-flex align-items-center">
+                                <div class="user_icon color_4">
+                                    <span>CK</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Cedric Kelly</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Senior Javascript Developer</td>
+                        <td>Edinburgh</td>
+                        <td>22</td>
+                        <td>2012/03/29</td>
+                        <td>$433,060</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user_media d-flex align-items-center">
+                                <div class="user_icon color_5">
+                                    <span>AS</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Airi Satou</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>33</td>
+                        <td>2008/11/28</td>
+                        <td>$162,700</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user_media d-flex align-items-center">
+                                <div class="user_icon color_6">
+                                    <span>BW</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Brielle Williamson</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Integration Specialist</td>
+                        <td>New York</td>
+                        <td>61</td>
+                        <td>2012/12/02</td>
+                        <td>$372,000</td>
+                    </tr>
+                    <tr>
+                        <td>Herrod Chandler</td>
+                        <td>Sales Assistant</td>
+                        <td>San Francisco</td>
+                        <td>59</td>
+                        <td>2012/08/06</td>
+                        <td>$137,500</td>
+                    </tr>
+                    <tr>
+                        <td>Rhona Davidson</td>
+                        <td>Integration Specialist</td>
+                        <td>Tokyo</td>
+                        <td>55</td>
+                        <td>2010/10/14</td>
+                        <td>$327,900</td>
+                    </tr>
+                    <tr>
+                        <td>Colleen Hurst</td>
+                        <td>Javascript Developer</td>
+                        <td>San Francisco</td>
+                        <td>39</td>
+                        <td>2009/09/15</td>
+                        <td>$205,500</td>
+                    </tr>
+                    <tr>
+                        <td>Sonya Frost</td>
+                        <td>Software Engineer</td>
+                        <td>Edinburgh</td>
+                        <td>23</td>
+                        <td>2008/12/13</td>
+                        <td>$103,600</td>
+                    </tr>
+                    <tr>
+                        <td>Jena Gaines</td>
+                        <td>Office Manager</td>
+                        <td>London</td>
+                        <td>30</td>
+                        <td>2008/12/19</td>
+                        <td>$90,560</td>
+                    </tr>
+                    <tr>
+                        <td>Quinn Flynn</td>
+                        <td>Support Lead</td>
+                        <td>Edinburgh</td>
+                        <td>22</td>
+                        <td>2013/03/03</td>
+                        <td>$342,000</td>
+                    </tr>
+                    <tr>
+                        <td>Charde Marshall</td>
+                        <td>Regional Director</td>
+                        <td>San Francisco</td>
+                        <td>36</td>
+                        <td>2008/10/16</td>
+                        <td>$470,600</td>
+                    </tr>
+                    <tr>
+                        <td>Haley Kennedy</td>
+                        <td>Senior Marketing Designer</td>
+                        <td>London</td>
+                        <td>43</td>
+                        <td>2012/12/18</td>
+                        <td>$313,500</td>
+                    </tr>
+                    <tr>
+                        <td>Tatyana Fitzpatrick</td>
+                        <td>Regional Director</td>
+                        <td>London</td>
+                        <td>19</td>
+                        <td>2010/03/17</td>
+                        <td>$385,750</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Silva</td>
+                        <td>Marketing Designer</td>
+                        <td>London</td>
+                        <td>66</td>
+                        <td>2012/11/27</td>
+                        <td>$198,500</td>
+                    </tr>
+                    <tr>
+                        <td>Paul Byrd</td>
+                        <td>Chief Financial Officer (CFO)</td>
+                        <td>New York</td>
+                        <td>64</td>
+                        <td>2010/06/09</td>
+                        <td>$725,000</td>
+                    </tr>
+                    <tr>
+                        <td>Gloria Little</td>
+                        <td>Systems Administrator</td>
+                        <td>New York</td>
+                        <td>59</td>
+                        <td>2009/04/10</td>
+                        <td>$237,500</td>
+                    </tr>
+                    <tr>
+                        <td>Bradley Greer</td>
+                        <td>Software Engineer</td>
+                        <td>London</td>
+                        <td>41</td>
+                        <td>2012/10/13</td>
+                        <td>$132,000</td>
+                    </tr>
+                    <tr>
+                        <td>Dai Rios</td>
+                        <td>Personnel Lead</td>
+                        <td>Edinburgh</td>
+                        <td>35</td>
+                        <td>2012/09/26</td>
+                        <td>$217,500</td>
+                    </tr>
+                    <tr>
+                        <td>Jenette Caldwell</td>
+                        <td>Development Lead</td>
+                        <td>New York</td>
+                        <td>30</td>
+                        <td>2011/09/03</td>
+                        <td>$345,000</td>
+                    </tr>
+                    <tr>
+                        <td>Yuri Berry</td>
+                        <td>Chief Marketing Officer (CMO)</td>
+                        <td>New York</td>
+                        <td>40</td>
+                        <td>2009/06/25</td>
+                        <td>$675,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
 </div>
 
 <ng-template #verticalCenteredModal let-modal>
     <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add Portal User</h5>
         <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
     </div>
     <div class="modal-body">
