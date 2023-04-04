@@ -12,6 +12,9 @@ import { ErrorPageComponent } from './views/pages/error-page/error-page.componen
 
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { PortalUsersComponent } from './views/pages/portal-users/portal-users.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,10 @@ import { PortalUsersComponent } from './views/pages/portal-users/portal-users.co
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    NgxDatatableModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbTooltipModule
   ],
   providers: [
     AuthGuard,

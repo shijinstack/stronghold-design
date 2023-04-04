@@ -13,6 +13,36 @@
     </div>
 </div>
 
+<div class="row">
+  <div class="col-md-3">
+    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="search" (keyup)="false"
+      (paste)="false" />
+  </div>
+  <div class="col-md-2">
+    <select class="form-control" [(ngModel)]="limit" (change)="false">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="50">50</option>
+    </select>
+  </div>
+</div>
+<div class="table-responsive">
+  <ngx-datatable class="bootstrap" [columns]="headers" [columnMode]="ColumnMode.force" [footerHeight]="50" [limit]="10"
+    rowHeight="auto" [loadingIndicator]="loadingIndicator" [limit]="limit" [rows]="rows" [count]="rows.length"
+    [externalSorting]="false" [externalPaging]="false" (sort)="false" (page)="false">
+    <ngx-datatable-column *ngFor="let col of headers" [name]="col.name" [sortable]="col.sortable" [prop]="col.prop">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Actions" [sortable]="false" prop="name">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        <a class="btn icon-btn text-danger" (click)="false" [ngbTooltip]="'Delete User'">
+          <i class="feather icon-user-x"></i>
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>
+
 <ng-template #verticalCenteredModal let-modal>
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
