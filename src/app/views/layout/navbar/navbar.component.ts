@@ -1,19 +1,22 @@
-import { Component, OnInit, Inject, Renderer2, HostListener } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2, HostListener, OnDestroy } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { MENU } from './menu';
 import { MenuItem } from './menu.model';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
 
   menuItems: MenuItem[] = [];
   industry = false;
+
+  unsub$ = new Subject<void>();
 
   /**
   * Fixed header menu on scroll
@@ -39,10 +42,18 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.menuItems = MENU;
 
-    if (this.router.url.includes('/dashboard')) {
-      this.industry = true;
-      
-    }
+    this.router.events.pipe(
+      takeUntil(this.unsub$)
+    ).subscribe((val) => {
+      // see also 
+      if(val instanceof NavigationEnd) {
+        if (val?.url === '/dashboard') {
+          this.industry = true;
+        } else {
+          this.industry = false;
+        }
+      }
+  });
     // console.log(this.router.url)
     /**
     * closing the header menu after route change in tablet/mobile devices
@@ -54,6 +65,11 @@ export class NavbarComponent implements OnInit {
         }
       });
     }
+  }
+
+  ngOnDestroy(): void {
+      this.unsub$.next();
+      this.unsub$.unsubscribe();
   }
 
   /**
