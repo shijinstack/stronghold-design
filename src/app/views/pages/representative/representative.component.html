@@ -50,7 +50,7 @@
                         <th><a class="dataTable-sorter">Name</a></th>
                         <th><a class="dataTable-sorter">Email Address</a></th>
                         <th><a class="dataTable-sorter">Phone Number</a></th>
-                        <th><a class="dataTable-sorter">Reporting Manager</a></th>
+                        <th><a class="dataTable-sorter">Linked Contacts</a></th>
                         <th width="50"></th>
                     </tr>
                 </thead>
@@ -473,6 +473,7 @@
     </div>
 </div>
 
+<!-- Add Modal -->
 <ng-template #addRepresentativeModal let-modal>
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Add Representative</h5>
@@ -566,7 +567,7 @@
         </div>
 
         <div class="mb-4">
-            <label for="input13" class="form-label">Reporting Manager <span class="text-danger">*</span></label>
+            <label for="input13" class="form-label">Linked Contacts<span class="text-danger">*</span></label>
             <ng-select [items]="people" [multiple]=true [closeOnSelect]="false" [searchable]="false" bindLabel="name" placeholder="Select people" [(ngModel)]="selectedPeople">
             </ng-select>
         </div>
@@ -580,6 +581,7 @@
     </div>
 </ng-template>
 
+<!-- View Modal -->
 <ng-template #viewRepresentativeModal let-modal>
     <div class="modal-header">
         <h5 class="modal-title">Representative Details</h5>
@@ -729,7 +731,7 @@
     </div>
 </ng-template>
 
-<!-- Delete User -->
+<!-- Delete Modal -->
 <ng-template #deleteUserModal let-modal>
     <div class="modal-header border-none">
         <h5 class="modal-title" id="exampleModalLabel">Delete Representative</h5>
