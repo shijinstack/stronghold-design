@@ -8,7 +8,7 @@
         min-height: 100%;
     }
     .modal-fullscreen {
-        max-width: 720px;
+        max-width: 700px;
         position: fixed;
         right: -10px;
     }
@@ -203,6 +203,24 @@ td .dropdown-toggle.btn.btn-icon::after {
 
 .user_icon.square {
     border-radius: 4px;
+}
+
+.upload_company_logo {
+    width: 140px;
+    height: 140px;
+    border: 1px dashed $primary;
+    border-radius: 50%;
+    margin: 0px auto 7px;
+    background-color: #f8f8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    cursor: pointer;
+    flex-direction: column;
+    i {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 460px) {
