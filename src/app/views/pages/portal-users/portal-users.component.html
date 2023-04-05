@@ -13,7 +13,7 @@
             <i class="ri-filter-3-line"></i>
             Filter
         </button>
-        <button type="button" class="btn btn-primary add_btn" (click)="openVerticalCenteredModal(verticalCenteredModal)">
+        <button type="button" class="btn btn-primary add_btn" (click)="openAddUserdModal(addUserModal)">
             <i class="ri-add-line"></i>
             Add User
         </button>
@@ -24,7 +24,6 @@
     <div class="card-body">
         <div class="table_head">
             <h6 class="card-title mb-0">Portal User List</h6>
-
             <div class="dataTable-top">
                 <div class="dataTable-dropdown">
                     <label>
@@ -44,7 +43,6 @@
         </div>
 
         <div class="table-responsive">
-
             <table id="dataTableExample" class="table">
                 <thead>
                     <tr>
@@ -61,7 +59,7 @@
                     <tr>
                         <td>#01</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_1">
                                     <span>LP</span>
                                 </div>
@@ -80,9 +78,9 @@
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -90,7 +88,7 @@
                     <tr>
                         <td>#02</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_2">
                                     <span>GW</span>
                                 </div>
@@ -109,9 +107,9 @@
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -119,7 +117,7 @@
                     <tr>
                         <td>#03</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_3">
                                     <span>AC</span>
                                 </div>
@@ -138,9 +136,9 @@
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -148,7 +146,7 @@
                     <tr>
                         <td>#04</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_4">
                                     <span>CK</span>
                                 </div>
@@ -167,9 +165,9 @@
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -177,7 +175,7 @@
                     <tr>
                         <td>#05</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_5">
                                     <span>AS</span>
                                 </div>
@@ -196,9 +194,9 @@
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -206,7 +204,7 @@
                     <tr>
                         <td>#06</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_6">
                                     <span>BW</span>
                                 </div>
@@ -225,9 +223,9 @@
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -235,7 +233,7 @@
                     <tr>
                         <td>#07</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_1">
                                     <span>LP</span>
                                 </div>
@@ -254,9 +252,9 @@
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -264,7 +262,7 @@
                     <tr>
                         <td>#08</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_2">
                                     <span>GW</span>
                                 </div>
@@ -283,9 +281,9 @@
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -293,7 +291,7 @@
                     <tr>
                         <td>#09</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_3">
                                     <span>AC</span>
                                 </div>
@@ -307,14 +305,14 @@
                         <td>Admin</td>
                         <td>Marathon</td>
                         <td>
-                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                            <div ngbDropdown placement="top-end" class="btn-group">
                                 <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -322,7 +320,7 @@
                     <tr>
                         <td>#10</td>
                         <td>
-                            <div class="user_media d-flex align-items-center">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openViewUserModal(viewUserModal)">
                                 <div class="user_icon color_4">
                                     <span>CK</span>
                                 </div>
@@ -336,14 +334,14 @@
                         <td>User</td>
                         <td>Philips 66</td>
                         <td>
-                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                            <div ngbDropdown placement="top-end" class="btn-group">
                                 <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openViewUserModal(viewUserModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddUserdModal(addUserModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteUserModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -351,6 +349,7 @@
                 </tbody>
             </table>
         </div>
+
         <div class="dataTable-bottom">
             <div class="dataTable-info">Showing 1 to 10 of 22 entries</div>
             <nav class="dataTable-pagination">
@@ -365,7 +364,7 @@
     </div>
 </div>
 
-<ng-template #verticalCenteredModal let-modal>
+<ng-template #addUserModal let-modal>
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Add Portal User</h5>
         <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
@@ -374,13 +373,13 @@
         <!-- <form class="forms-wrap"> -->
         <div class="row">
             <div class="col-md-6">
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="input1" class="form-label">First Name <span class="text-danger">*</span></label>
                     <input type="text" name="firstname" class="form-control" id="input1" autocomplete="off" placeholder="first name">
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="input2" class="form-label">Last Name <span class="text-danger">*</span></label>
                     <input type="text" name="lastname" class="form-control" id="input2" autocomplete="off" placeholder="last name">
                 </div>
@@ -388,13 +387,13 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="input3" class="form-label">Email Address <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="input3" autocomplete="off" placeholder="email id">
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="input4" class="form-label">Phone Number <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="input4" autocomplete="off" placeholder="phone number">
                 </div>
@@ -402,27 +401,138 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <div class="mb-3">
+                <div class="mb-4">
+                    <label for="input8" class="form-label">Age <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="input8" autocomplete="off" placeholder="enter age">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
                     <label for="input5" class="form-label">Select Role <span class="text-danger">*</span></label>
                     <ng-select [items]="simpleItems" [searchable]="false" [(ngModel)]="selectedSimpleItem" placeholder="select role"></ng-select>
                 </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="input6" class="form-label">Company </label>
                     <input type="text" class="form-control" id="input6" autocomplete="off" placeholder="enter company name">
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input7" class="form-label">Designation </label>
+                    <input type="text" class="form-control" id="input7" autocomplete="off" placeholder="enter designation">
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="input7" class="form-label">Designation </label>
-            <input type="text" class="form-control" id="input7" autocomplete="off" placeholder="enter designation">
-        </div>
+
 
         <!-- </form> -->
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
         <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Add User</button>
+    </div>
+</ng-template>
+
+<ng-template #viewUserModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title">Portal User Details</h5>
+        <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+
+        <div class="user_media large d-flex align-items-center">
+            <div class="user_icon color_1">
+                <span>LP</span>
+            </div>
+            <div class="user_media d-flex align-items-center">
+                <div class="flex-1">
+                    <h5 class="modal-title">Leonardo Payne</h5>
+                    <p class="text-muted">leonardopayne@gmail.com</p>
+                </div>
+                <span class="badge bg-info">Admin</span>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">First Name</label>
+                    <p class="text-muted">Leonardo</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Last Name</label>
+                    <p class="text-muted">Payne</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Email Address</label>
+                    <p class="text-muted">leonardopayne@gmail.com</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Phone Number</label>
+                    <p class="text-muted">+1 987 2455 3426</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Age</label>
+                    <p class="text-muted">35</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Role</label>
+                    <p class="text-muted">Admin</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Company</label>
+                    <p class="text-muted">Valero</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Designation</label>
+                    <p class="text-muted">Business Development Executive</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+        <button type="button" class="btn btn-danger" (click)="openDeleteUserModal(deleteUserModal)">Delete User</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Edit User</button>
+    </div>
+</ng-template>
+
+<!-- Delete User -->
+<ng-template #deleteUserModal let-modal>
+    <div class="modal-header border-none">
+        <h5 class="modal-title" id="exampleModalLabel">Delete User</h5>
+        <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <p>Are you sure, you want to detete this user <strong>(User Name)</strong></p>
+    </div>
+    <div class="modal-footer border-none">
+        <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+        <button type="button" class="btn btn-danger" (click)="modal.close('by: save button')">Delete User</button>
     </div>
 </ng-template>

@@ -179,8 +179,18 @@ export class PortalUsersComponent implements OnInit {
 
   constructor(private modalService: NgbModal) { }
 
-  openVerticalCenteredModal(content: TemplateRef<any>) {
+  openAddUserdModal(content: TemplateRef<any>) {
     this.modalService.open(content, {centered: true, windowClass: 'modal_right', fullscreen: true  }).result.then((result) => {
+
+    }).catch((res) => {});
+  }
+  openViewUserModal(content: TemplateRef<any>) {
+    this.modalService.open(content, {centered: true, windowClass: 'modal_right', fullscreen: true  }).result.then((result) => {
+
+    }).catch((res) => {});
+  }
+  openDeleteUserModal(content: TemplateRef<any>) {
+    this.modalService.open(content, {centered: true }).result.then((result) => {
 
     }).catch((res) => {});
   }

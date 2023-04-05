@@ -8,7 +8,7 @@
         min-height: 100%;
     }
     .modal-fullscreen {
-        max-width: 820px;
+        max-width: 720px;
         position: fixed;
         right: -10px;
     }
@@ -132,5 +132,37 @@ td .dropdown-toggle.btn.btn-icon::after {
     align-items: center;
     .dataTable-top {
         flex: 1;
+    }
+}
+
+.display_label {
+    font-weight: 600;
+}
+
+.user_media.large {
+    gap: 1rem;
+    .user_icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.5rem;
+    }
+}
+
+.flex-1 {
+    flex: 1 !important;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.user_media.pointer {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 460px) {
+    .user_media.large .user_media {
+        flex-direction: column;
+        align-items: flex-start !important;
     }
 }
