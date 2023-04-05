@@ -201,6 +201,10 @@ td .dropdown-toggle.btn.btn-icon::after {
     cursor: pointer;
 }
 
+.user_icon.square {
+    border-radius: 4px;
+}
+
 @media screen and (max-width: 460px) {
     .user_media.large .user_media {
         flex-direction: column;

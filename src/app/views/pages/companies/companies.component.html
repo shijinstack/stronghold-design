@@ -1,0 +1,376 @@
+<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin page_title">
+    <div>
+        <nav class="page-breadcrumb mb-1">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Companies</li>
+            </ol>
+        </nav>
+        <h3 class="mb-3 mb-md-0 page_title">Companies</h3>
+    </div>
+    <div class="d-flex align-items-center flex-wrap text-nowrap title_action gap-1">
+        <button type="button" class="btn btn-outline-primary btn-icon-text dashfilter">
+            <i class="ri-filter-3-line"></i>
+            Filter
+        </button>
+        <button type="button" class="btn btn-primary add_btn">
+            <i class="ri-add-line"></i>
+            Add Company
+        </button>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table_head">
+            <h6 class="card-title mb-0">Companies List</h6>
+            <div class="dataTable-top">
+                <div class="dataTable-dropdown">
+                    <label>
+                        <select class="dataTable-selector">
+                            <option value="5">5</option>
+                            <option value="10" selected="">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                        </select> <span>entries per page</span>
+                    </label>
+                </div>
+                <div class="dataTable-search">
+                    <input class="dataTable-input" placeholder="Search..." type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table id="dataTableExample" class="table">
+                <thead>
+                    <tr>
+                        <th width="100"><a class="dataTable-sorter">Sl.No</a></th>
+                        <th><a class="dataTable-sorter">Company Name</a></th>
+                        <th><a class="dataTable-sorter">Company ID</a></th>
+                        <th><a class="dataTable-sorter">No of Refineries</a></th>
+                        <th><a class="dataTable-sorter">BBLs/day </a></th>
+                        <th><a class="dataTable-sorter">Currently In </a></th>
+                        <th><a class="dataTable-sorter">Previously In</a></th>
+                        <th width="50"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#01</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_1">
+                                    <span>V</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Valero</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#662453127</td>
+                        <td>14</td>
+                        <td>2.88M</td>
+                        <td>13</td>
+                        <td>13</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#02</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_2">
+                                    <span>M</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Marathon</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#863490263</td>
+                        <td>13</td>
+                        <td>2.88M</td>
+                        <td>08</td>
+                        <td>08</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#03</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_3">
+                                    <span>P</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Philips 66</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#563452345</td>
+                        <td>10</td>
+                        <td>1.89M</td>
+                        <td>06</td>
+                        <td>08</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#04</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_4">
+                                    <span>E</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">ExxonMobil</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#874512096</td>
+                        <td>08</td>
+                        <td>1.85m</td>
+                        <td>01</td>
+                        <td>01</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#05</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_5">
+                                    <span>H</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Holly Frontier</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#543278906</td>
+                        <td>08</td>
+                        <td>627k</td>
+                        <td>02</td>
+                        <td>07</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#06</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_6">
+                                    <span>S</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Shell</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#123765345</td>
+                        <td>06</td>
+                        <td>2.88m</td>
+                        <td>03</td>
+                        <td>03</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#07</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_7">
+                                    <span>P</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">PBF</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#985602453</td>
+                        <td>06</td>
+                        <td>937k</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#08</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_8">
+                                    <span>C</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Cenovus</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#653426178</td>
+                        <td>06</td>
+                        <td>921k</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#09</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_1">
+                                    <span>C</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Chevron</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#874230964</td>
+                        <td>05</td>
+                        <td>1.07m</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#10</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon square gradient_box_2">
+                                    <span>S</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Suncor</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>#247801567</td>
+                        <td>05</td>
+                        <td>466k</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="dataTable-bottom">
+            <div class="dataTable-info">Showing 1 to 10 of 12 entries</div>
+            <nav class="dataTable-pagination">
+                <ul class="dataTable-pagination-list">
+                    <li class="active"><a href="#" data-page="1">1</a></li>
+                    <li class=""><a href="#" data-page="2">2</a></li>
+                    <li class="pager"><a href="#" data-page="2">›</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,7 @@ export const MENU: MenuItem[] = [
   {
     label: 'Companies',
     icon: 'command',
+    link: 'companies'
   },
   {
     label: 'Representative',
