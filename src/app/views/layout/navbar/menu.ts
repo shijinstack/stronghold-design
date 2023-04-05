@@ -13,6 +13,7 @@ export const MENU: MenuItem[] = [
   {
     label: 'Representative',
     icon: 'users',
+    link: 'representative'
   },
   {
     label: 'Portal User',
