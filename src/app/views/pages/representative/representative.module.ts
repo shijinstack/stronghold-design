@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { RepresentativeComponent } from './representative.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
@@ -25,7 +26,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     FormsModule,
     NgSelectModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    NgbTooltipModule
   ]
 })
 export class RepresentativeModule { }

@@ -1,1 +1,474 @@
-<p>representative works!</p>
+<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin page_title">
+    <div>
+        <nav class="page-breadcrumb mb-1">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Representative</li>
+            </ol>
+        </nav>
+        <h3 class="mb-3 mb-md-0 page_title">Representative</h3>
+    </div>
+    <div class="d-flex align-items-center flex-wrap text-nowrap title_action gap-1">
+        <button type="button" class="btn btn-outline-primary btn-icon-text dashfilter">
+            <i class="ri-filter-3-line"></i>
+            Filter
+        </button>
+        <button type="button" class="btn btn-primary add_btn">
+            <i class="ri-add-line"></i>
+            Add Representative
+        </button>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table_head">
+            <h6 class="card-title mb-0">Representative List</h6>
+            <div class="dataTable-top">
+                <div class="dataTable-dropdown">
+                    <label>
+                        <select class="dataTable-selector">
+                            <option value="5">5</option>
+                            <option value="10" selected="">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                        </select> <span>entries per page</span>
+                    </label>
+                </div>
+                <div class="dataTable-search">
+                    <input class="dataTable-input" placeholder="Search..." type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table id="dataTableExample" class="table">
+                <thead>
+                    <tr>
+                        <th width="100"><a class="dataTable-sorter">Sl.No</a></th>
+                        <th><a class="dataTable-sorter">Name</a></th>
+                        <th><a class="dataTable-sorter">Email Address</a></th>
+                        <th><a class="dataTable-sorter">Phone Number</a></th>
+                        <th><a class="dataTable-sorter">Reporting Manager</a></th>
+                        <th width="50"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#01</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_1">
+                                    <span>LP</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Leonardo Payne</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>leonardopayne@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_6" placement="top" ngbTooltip="Herrod Chandler">
+                                    HC
+                                </div>
+                                <div class="user_icon color_5" placement="top" ngbTooltip="Rhona Davidson">
+                                    RD
+                                </div>
+                                <div class="user_icon color_4" placement="top" ngbTooltip="Colleen Hurst">
+                                    CH
+                                </div>
+                                <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                    SF
+                                </div>
+                                <label placement="top" data-html="true" [ngbTooltip]="tipContent">+2 More</label>
+                                <ng-template #tipContent>
+                                    Airi Satou<br> Brielle Williamson
+                                </ng-template>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#01</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_2">
+                                    <span>GW</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Garrett Winters</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>garrettwinters@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_4" placement="top" ngbTooltip="Colleen Hurst">
+                                    CH
+                                </div>
+                                <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                    SF
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#03</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_3">
+                                    <span>AC</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Ashton Cox</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>ashtoncox@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_6" placement="top" ngbTooltip="Herrod Chandler">
+                                    HC
+                                </div>
+                                <div class="user_icon color_5" placement="top" ngbTooltip="Rhona Davidson">
+                                    RD
+                                </div>
+                                <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                    SF
+                                </div>
+                                <label placement="top" data-html="true" [ngbTooltip]="tipContent">+1 More</label>
+                                <ng-template #tipContent>
+                                    Brielle Williamson
+                                </ng-template>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#04</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_4">
+                                    <span>CK</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Cedric Kelly</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>cedrickelly@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                    SF
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#05</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_1">
+                                    <span>LP</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Leonardo Payne</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>leonardopayne@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_6" placement="top" ngbTooltip="Herrod Chandler">
+                                    HC
+                                </div>
+                                <div class="user_icon color_5" placement="top" ngbTooltip="Rhona Davidson">
+                                    RD
+                                </div>
+                                <div class="user_icon color_4" placement="top" ngbTooltip="Colleen Hurst">
+                                    CH
+                                </div>
+                                <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                    SF
+                                </div>
+                                <label placement="top" data-html="true" [ngbTooltip]="tipContent">+2 More</label>
+                                <ng-template #tipContent>
+                                    Airi Satou<br> Brielle Williamson
+                                </ng-template>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#06</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_5">
+                                    <span>AS</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Airi Satou</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>airisatou@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_5" placement="top" ngbTooltip="Rhona Davidson">
+                                    RD
+                                </div>
+                                <div class="user_icon color_4" placement="top" ngbTooltip="Colleen Hurst">
+                                    CH
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#07</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_6">
+                                    <span>BW</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Brielle Williamson</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>briellewilliamson@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_4" placement="top" ngbTooltip="Colleen Hurst">
+                                    CH
+                                </div>
+                                <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                    SF
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#08</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_2">
+                                    <span>GW</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Garrett Winters</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>garrettwinters@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_6" placement="top" ngbTooltip="Herrod Chandler">
+                                    HC
+                                </div>
+                                <div class="user_icon color_5" placement="top" ngbTooltip="Rhona Davidson">
+                                    RD
+                                </div>
+                                <div class="user_icon color_4" placement="top" ngbTooltip="Colleen Hurst">
+                                    CH
+                                </div>
+                                <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                    SF
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#09</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_3">
+                                    <span>AC</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Ashton Cox</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>ashtoncox@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                    SF
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#10</td>
+                        <td>
+                            <div class="user_media d-flex align-items-center pointer">
+                                <div class="user_icon color_4">
+                                    <span>CK</span>
+                                </div>
+                                <div class="user_media">
+                                    <h6 class="text-body mb-0">Cedric Kelly</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>cedrickelly@gmail.com</td>
+                        <td>+1 987 2455 3426</td>
+                        <td>
+                            <div class="icon_user_block">
+                                <div class="user_icon color_6" placement="top" ngbTooltip="Herrod Chandler">
+                                    HC
+                                </div>
+                                <div class="user_icon color_5" placement="top" ngbTooltip="Rhona Davidson">
+                                    RD
+                                </div>
+                                <div class="user_icon color_4" placement="top" ngbTooltip="Colleen Hurst">
+                                    CH
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                                <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                  <i class="ri-more-2-fill"></i>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                    <button class="dropdown-item">View Details</button>
+                                    <button class="dropdown-item">Edit</button>
+                                    <button class="dropdown-item">Delete</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="dataTable-bottom">
+            <div class="dataTable-info">Showing 1 to 10 of 22 entries</div>
+            <nav class="dataTable-pagination">
+                <ul class="dataTable-pagination-list">
+                    <li class="active"><a href="#" data-page="1">1</a></li>
+                    <li class=""><a href="#" data-page="2">2</a></li>
+                    <li class=""><a href="#" data-page="3">3</a></li>
+                    <li class="pager"><a href="#" data-page="2">›</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
