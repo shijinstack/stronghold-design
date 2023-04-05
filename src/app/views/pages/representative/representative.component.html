@@ -58,16 +58,16 @@
                     <tr>
                         <td>#01</td>
                         <td>
-                            <div class="user_media d-flex align-items-center pointer">
+                            <div class="user_media d-flex align-items-center pointer" (click)="openRepresentativeModal(viewRepresentativeModal)">
                                 <div class="user_icon color_1">
-                                    <span>LP</span>
+                                    <span>TN</span>
                                 </div>
                                 <div class="user_media">
-                                    <h6 class="text-body mb-0">Leonardo Payne</h6>
+                                    <h6 class="text-body mb-0">Tiger Nixon</h6>
                                 </div>
                             </div>
                         </td>
-                        <td>leonardopayne@gmail.com</td>
+                        <td>tigernixon@gmail.com</td>
                         <td>+1 987 2455 3426</td>
                         <td>
                             <div class="icon_user_block">
@@ -95,9 +95,9 @@
                                   <i class="ri-more-2-fill"></i>
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
-                                    <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openRepresentativeModal(viewRepresentativeModal)">View Details</button>
+                                    <button class="dropdown-item" (click)="openAddRepresentativeModal(addRepresentativeModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteRepresentativeModal(deleteUserModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -403,7 +403,7 @@
                             </div>
                         </td>
                         <td>
-                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                            <div ngbDropdown placement="top-end" class="btn-group">
                                 <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
                                   <i class="ri-more-2-fill"></i>
                                 </button>
@@ -443,7 +443,7 @@
                             </div>
                         </td>
                         <td>
-                            <div ngbDropdown placement="bottom-end" class="btn-group">
+                            <div ngbDropdown placement="top-end" class="btn-group">
                                 <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
                                   <i class="ri-more-2-fill"></i>
                                 </button>
@@ -577,5 +577,169 @@
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
         <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Add Representative</button>
+    </div>
+</ng-template>
+
+<ng-template #viewRepresentativeModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title">Representative Details</h5>
+        <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+
+        <div class="user_media large d-flex align-items-center">
+            <div class="user_icon color_1">
+                <span>TN</span>
+            </div>
+            <div class="user_media d-flex align-items-center">
+                <div class="flex-1">
+                    <h5 class="modal-title">Tiger Nixon</h5>
+                    <p class="text-muted">tigernixon@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">First Name</label>
+                    <p class="text-muted">Tiger</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Last Name</label>
+                    <p class="text-muted">Nixon</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Email Address</label>
+                    <p class="text-muted">leonardopayne@gmail.com</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Phone Number</label>
+                    <p class="text-muted">+1 987 2455 3426</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Age</label>
+                    <p class="text-muted">35</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Designation</label>
+                    <p class="text-muted">Marketing Manager</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Address Line 1</label>
+                    <p class="text-muted">1533 Paul Wayne Haggerty Road</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Address Line 2</label>
+                    <p class="text-muted">--</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Country</label>
+                    <p class="text-muted">United States</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">State</label>
+                    <p class="text-muted">Louisiana</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">City</label>
+                    <p class="text-muted">Kenner</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-3">
+                    <label class="tx-12 mb-0 text-uppercase display_label">Zip/Pin Code</label>
+                    <p class="text-muted">70062</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <label class="tx-12 mb-0 text-uppercase display_label">Reporting Manager</label>
+            <div class="d-flex flex-wrap gap-3 mt-3">
+                <div class="user_media d-flex align-items-center pointer">
+                    <div class="user_icon color_6">
+                        <span>LP</span>
+                    </div>
+                    <div class="user_media">
+                        <h6 class="text-body mb-0">Leonardo Payne</h6>
+                    </div>
+                </div>
+                <div class="user_media d-flex align-items-center pointer">
+                    <div class="user_icon color_2">
+                        <span>GW</span>
+                    </div>
+                    <div class="user_media">
+                        <h6 class="text-body mb-0">Garrett Winters</h6>
+                    </div>
+                </div>
+                <div class="user_media d-flex align-items-center pointer">
+                    <div class="user_icon color_3">
+                        <span>AC</span>
+                    </div>
+                    <div class="user_media">
+                        <h6 class="text-body mb-0">Ashton Cox</h6>
+                    </div>
+                </div>
+                <div class="user_media d-flex align-items-center pointer">
+                    <div class="user_icon color_4">
+                        <span>CK</span>
+                    </div>
+                    <div class="user_media">
+                        <h6 class="text-body mb-0">Cedric Kelly</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+        <button type="button" class="btn btn-danger" (click)="openDeleteRepresentativeModal(deleteUserModal)">Delete</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Edit Representative</button>
+    </div>
+</ng-template>
+
+<!-- Delete User -->
+<ng-template #deleteUserModal let-modal>
+    <div class="modal-header border-none">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Representative</h5>
+        <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <p>Are you sure, you want to detete this Representative <strong>(User Name)</strong>?</p>
+    </div>
+    <div class="modal-footer border-none">
+        <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+        <button type="button" class="btn btn-danger" (click)="modal.close('by: save button')">Delete Representative</button>
     </div>
 </ng-template>

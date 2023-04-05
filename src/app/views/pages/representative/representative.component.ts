@@ -27,6 +27,18 @@ export class RepresentativeComponent implements OnInit {
 
     }).catch((res) => {});
   }
+  
+  openRepresentativeModal(content: TemplateRef<any>) {
+    this.modalService.open(content, {centered: true, windowClass: 'modal_right', fullscreen: true  }).result.then((result) => {
+
+    }).catch((res) => {});
+  }
+
+  openDeleteRepresentativeModal(content: TemplateRef<any>) {
+    this.modalService.open(content, {centered: true }).result.then((result) => {
+
+    }).catch((res) => {});
+  }
 
   ngOnInit(): void {
     this.simpleItems = ['India', 'USA', 'Japan'];
