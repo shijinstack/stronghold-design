@@ -13,7 +13,7 @@
             <i class="ri-filter-3-line"></i>
             Filter
         </button>
-        <button type="button" class="btn btn-primary add_btn">
+        <button type="button" class="btn btn-primary add_btn" (click)="openAddRepresentativeModal(addRepresentativeModal)">
             <i class="ri-add-line"></i>
             Add Representative
         </button>
@@ -472,3 +472,110 @@
         </div>
     </div>
 </div>
+
+<ng-template #addRepresentativeModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Representative</h5>
+        <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <!-- <form class="forms-wrap"> -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input1" class="form-label">First Name <span class="text-danger">*</span></label>
+                    <input type="text" name="firstname" class="form-control" id="input1" autocomplete="off" placeholder="first name">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input2" class="form-label">Last Name <span class="text-danger">*</span></label>
+                    <input type="text" name="lastname" class="form-control" id="input2" autocomplete="off" placeholder="last name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input3" class="form-label">Email Address <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="input3" autocomplete="off" placeholder="email id">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input4" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="input4" autocomplete="off" placeholder="phone number">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input5" class="form-label">Age <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="input5" autocomplete="off" placeholder="enter age">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input6" class="form-label">Designation </label>
+                    <input type="text" class="form-control" id="input6" autocomplete="off" placeholder="enter designation">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input7" class="form-label">Address Line 1 <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="input7" autocomplete="off" placeholder="enter address line 1">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input8" class="form-label">Address Line 2 </label>
+                    <input type="text" class="form-control" id="input8" autocomplete="off" placeholder="enter address line 2">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input9" class="form-label">Country <span class="text-danger">*</span></label>
+                    <ng-select [items]="simpleItems" [searchable]="false" [(ngModel)]="selectedSimpleItem" placeholder="select country"></ng-select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input10" class="form-label">State <span class="text-danger">*</span></label>
+                    <ng-select [items]="simpleItems2" [searchable]="false" [(ngModel)]="selectedSimpleItem2" placeholder="select state"></ng-select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input11" class="form-label">City <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="input11" autocomplete="off" placeholder="enter city">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="input12" class="form-label">Zip/Pin Code <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="input12" autocomplete="off" placeholder="enter zip/pin">
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="input13" class="form-label">Reporting Manager <span class="text-danger">*</span></label>
+            <ng-select [items]="people" [multiple]=true [closeOnSelect]="false" [searchable]="false" bindLabel="name" placeholder="Select people" [(ngModel)]="selectedPeople">
+            </ng-select>
+        </div>
+
+
+        <!-- </form> -->
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Add Representative</button>
+    </div>
+</ng-template>

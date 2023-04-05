@@ -27,6 +27,7 @@ const routes: Routes = [
     FormsModule,
     NgSelectModule,
     NgbDropdownModule,
+    NgSelectModule,
     NgbTooltipModule
   ]
 })
