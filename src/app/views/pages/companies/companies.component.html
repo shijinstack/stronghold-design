@@ -85,8 +85,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -118,8 +118,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -151,8 +151,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -184,8 +184,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -217,8 +217,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -250,8 +250,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -283,8 +283,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -316,8 +316,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -349,8 +349,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -382,8 +382,8 @@
                                 </button>
                                 <div ngbDropdownMenu aria-labelledby="dropupMenu">
                                     <button class="dropdown-item">View Details</button>
-                                    <button class="dropdown-item">Edit</button>
-                                    <button class="dropdown-item">Delete</button>
+                                    <button class="dropdown-item" (click)="openAddCompanyModal(addCompanyModal)">Edit</button>
+                                    <button class="dropdown-item" (click)="openDeleteCompanyModal(deleteCompanyModal)">Delete</button>
                                 </div>
                             </div>
                         </td>
@@ -506,5 +506,20 @@
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
         <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Add Company</button>
+    </div>
+</ng-template>
+
+<!-- Delete Modal -->
+<ng-template #deleteCompanyModal let-modal>
+    <div class="modal-header border-none">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Company</h5>
+        <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <p>Are you sure, you want to detete this company <strong>(Company Name)</strong>?</p>
+    </div>
+    <div class="modal-footer border-none">
+        <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+        <button type="button" class="btn btn-danger" (click)="modal.close('by: save button')">Delete User</button>
     </div>
 </ng-template>

@@ -20,6 +20,14 @@ export class CompaniesComponent implements OnInit {
 
     }).catch((res) => {});
   }
+
+  openDeleteCompanyModal(content: TemplateRef<any>) {
+    this.modalService.open(content, {centered: true }).result.then((result) => {
+
+    }).catch((res) => {});
+  }
+
+
   ngOnInit(): void {
     this.simpleItems = ['India', 'USA', 'Japan'];
     this.simpleItems2 = ['Kerala', 'Tamilnadu', 'Karnataka'];
