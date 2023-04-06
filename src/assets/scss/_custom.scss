@@ -337,6 +337,57 @@ img.invert {
     color: #7987a1 !important;
 }
 
+.modal_right.full .modal-fullscreen {
+    max-width: 1400px;
+}
+
+.splitted_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.splitted_right {
+    border-left: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+}
+
+.splitted_left,
+.splitted_right {
+    overflow-y: auto;
+}
+
+.timeline {
+    background: rgba(194, 199, 253, 0.2);
+    margin: 0 0 0 0px;
+    max-width: 100%;
+    padding: 2rem;
+}
+
+.timeline .event::after {
+    left: -2.4rem;
+}
+
+.splitted_right {
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed_box {
+    background-color: #F0F0F6;
+    position: relative;
+}
+
+.fixed_box textarea {
+    resize: none;
+}
+
+.btn_textarea {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 2.2em;
+}
+
 @media screen and (max-width: 767px) {
     .company_head {
         flex-direction: column;
