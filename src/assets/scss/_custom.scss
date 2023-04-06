@@ -271,6 +271,39 @@ td .dropdown-toggle.btn.btn-icon::after {
     --bs-table-accent-bg: #f8f8fb;
 }
 
+.company_table .user_media {
+    padding: 6px 10px 6px 0;
+}
+
+.company_table .btn-group {
+    padding: 4px 0 4px 0;
+}
+
+.employee_list tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.modal-header,
+.modal-body {
+    padding: 1rem 1.5rem;
+}
+
+.modal-footer {
+    padding: 0.5rem 1.5rem;
+}
+
+.modal-footer.border-none {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+img.invert {
+    filter: invert(100%);
+    height: auto !important;
+    width: 25px !important;
+    border-radius: 0 !important;
+}
+
 @media screen and (max-width: 460px) {
     .user_media.large .user_media {
         flex-direction: column;

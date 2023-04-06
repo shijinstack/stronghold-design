@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin page_title mb-2">
+<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin page_title mb-3">
     <nav class="page-breadcrumb mb-1">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center flex-wrap text-nowrap title_action gap-1">
-                    <button type="button" class="btn btn-danger add_btn">
+                    <button type="button" class="btn btn-outline-danger add_btn">
                         <i class="ri-delete-bin-line"></i>
                             Delete
                     </button>
@@ -118,81 +118,139 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
-                    <h6 class="card-title mb-0">Inbox</h6>
-                    <div ngbDropdown class="mb-2">
-                        <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button" id="dropdownMenuButton6">
-                <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
-              </button>
-                        <div ngbDropdownMenu aria-labelledby="dropdownMenuButton6">
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye" appFeatherIcon class="icon-sm me-2"></i> <span class="">View</span></a>
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2" appFeatherIcon class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash" appFeatherIcon class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer" appFeatherIcon class="icon-sm me-2"></i> <span class="">Print</span></a>
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="download" appFeatherIcon class="icon-sm me-2"></i> <span class="">Download</span></a>
-                        </div>
-                    </div>
+                    <h6 class="card-title mb-0">Stronghold Companies List</h6>
+                    <button type="button" class="btn btn-link">View All</button>
                 </div>
                 <div class="d-flex flex-column">
-                    <a href="" (click)="false" class="d-flex align-items-center border-bottom pb-3">
-                        <div class="me-3">
-                            <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
-                        </div>
-                        <div class="w-100">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="text-body mb-2">Leonardo Payne</h6>
-                                <p class="text-muted tx-12">12.30 PM</p>
-                            </div>
-                            <p class="text-muted tx-13">Hey! there I'm available...</p>
-                        </div>
-                    </a>
-                    <a href="" (click)="false" class="d-flex align-items-center border-bottom py-3">
-                        <div class="me-3">
-                            <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
-                        </div>
-                        <div class="w-100">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="text-body mb-2">Carl Henson</h6>
-                                <p class="text-muted tx-12">02.14 AM</p>
-                            </div>
-                            <p class="text-muted tx-13">I've finished it! See you so..</p>
-                        </div>
-                    </a>
-                    <a href="" (click)="false" class="d-flex align-items-center border-bottom py-3">
-                        <div class="me-3">
-                            <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
-                        </div>
-                        <div class="w-100">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="text-body mb-2">Jensen Combs</h6>
-                                <p class="text-muted tx-12">08.22 PM</p>
-                            </div>
-                            <p class="text-muted tx-13">This template is awesome!</p>
-                        </div>
-                    </a>
-                    <a href="" (click)="false" class="d-flex align-items-center border-bottom py-3">
-                        <div class="me-3">
-                            <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
-                        </div>
-                        <div class="w-100">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="text-body mb-2">Amiah Burton</h6>
-                                <p class="text-muted tx-12">05.49 AM</p>
-                            </div>
-                            <p class="text-muted tx-13">Nice to meet you</p>
-                        </div>
-                    </a>
-                    <a href="" (click)="false" class="d-flex align-items-center border-bottom py-3">
-                        <div class="me-3">
-                            <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
-                        </div>
-                        <div class="w-100">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="text-body mb-2">Yaretzi Mayo</h6>
-                                <p class="text-muted tx-12">01.19 AM</p>
-                            </div>
-                            <p class="text-muted tx-13">Hey! there I'm available...</p>
-                        </div>
-                    </a>
+                    <div class="table-responsive">
+                        <table class="table company_table">
+                            <tr>
+                                <td>
+                                    <div class="user_media d-flex align-items-center pointer">
+                                        <div class="user_icon square gradient_box_2">
+                                            <img class="invert" src="assets/images/companies/logo_01.png" />
+                                        </div>
+                                        <div class="user_media">
+                                            <h6 class="text-body mb-0">Cat-Spec, Ltd.</h6>
+                                            <p class="text-muted">Company descriptions...</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="40">
+                                    <div ngbDropdown placement="bottom-end" class="btn-group">
+                                        <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                            <i class="ri-more-2-fill"></i>
+                                            </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                            <button class="dropdown-item">View Details</button>
+                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user_media d-flex align-items-center pointer">
+                                        <div class="user_icon square gradient_box_3">
+                                            <img class="invert" src="assets/images/companies/logo_05.png" />
+                                        </div>
+                                        <div class="user_media">
+                                            <h6 class="text-body mb-0">Elite Piping & Civil, Ltd.</h6>
+                                            <p class="text-muted">Company descriptions...</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="40">
+                                    <div ngbDropdown placement="bottom-end" class="btn-group">
+                                        <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                            <i class="ri-more-2-fill"></i>
+                                            </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                            <button class="dropdown-item">View Details</button>
+                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user_media d-flex align-items-center pointer">
+                                        <div class="user_icon square gradient_box_4">
+                                            <img class="invert" src="assets/images/companies/logo_04.png" />
+                                        </div>
+                                        <div class="user_media">
+                                            <h6 class="text-body mb-0">Stronghold Tower Group, Ltd.</h6>
+                                            <p class="text-muted">Company descriptions...</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="40">
+                                    <div ngbDropdown placement="bottom-end" class="btn-group">
+                                        <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                            <i class="ri-more-2-fill"></i>
+                                            </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                            <button class="dropdown-item">View Details</button>
+                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user_media d-flex align-items-center pointer">
+                                        <div class="user_icon square gradient_box_5">
+                                            <img class="invert" src="assets/images/companies/logo_06.png" />
+                                        </div>
+                                        <div class="user_media">
+                                            <h6 class="text-body mb-0">Turnkey I&E, Ltd.</h6>
+                                            <p class="text-muted">Company descriptions...</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="40">
+                                    <div ngbDropdown placement="top-end" class="btn-group">
+                                        <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                            <i class="ri-more-2-fill"></i>
+                                            </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                            <button class="dropdown-item">View Details</button>
+                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user_media d-flex align-items-center pointer">
+                                        <div class="user_icon square gradient_box_6">
+                                            <img class="invert" src="assets/images/companies/logo_03.png" />
+                                        </div>
+                                        <div class="user_media">
+                                            <h6 class="text-body mb-0">Specialty Tank Services, Ltd.</h6>
+                                            <p class="text-muted">Company descriptions...</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="40">
+                                    <div ngbDropdown placement="top-end" class="btn-group">
+                                        <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                            <i class="ri-more-2-fill"></i>
+                                            </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                            <button class="dropdown-item">View Details</button>
+                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,90 +258,184 @@
     <div class="col-lg-7 col-xl-8 stretch-card">
         <div class="card">
             <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-2">
-                    <h6 class="card-title mb-0">Projects</h6>
-                    <div ngbDropdown class="mb-2">
-                        <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button" id="dropdownMenuButton7">
-                <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
-              </button>
-                        <div ngbDropdownMenu aria-labelledby="dropdownMenuButton7">
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye" appFeatherIcon class="icon-sm me-2"></i> <span class="">View</span></a>
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2" appFeatherIcon class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash" appFeatherIcon class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer" appFeatherIcon class="icon-sm me-2"></i> <span class="">Print</span></a>
-                            <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="download" appFeatherIcon class="icon-sm me-2"></i> <span class="">Download</span></a>
-                        </div>
-                    </div>
+                <div class="d-flex justify-content-between align-items-baseline mb-4">
+                    <h6 class="card-title mb-0">Company Employee List</h6>
+                    <button type="button" class="btn btn-link">View All</button>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-hover mb-0">
+                    <table class="table table-hover mb-0 employee_list">
                         <thead>
                             <tr>
-                                <th class="pt-0">#</th>
-                                <th class="pt-0">Project Name</th>
-                                <th class="pt-0">Start Date</th>
-                                <th class="pt-0">Due Date</th>
-                                <th class="pt-0">Status</th>
-                                <th class="pt-0">Assign</th>
+                                <th class="pt-0">SL.No</th>
+                                <th class="pt-0">Name</th>
+                                <th class="pt-0">Email</th>
+                                <th class="pt-0">Phone</th>
+                                <th class="pt-0">Linked Contacts</th>
+                                <th class="pt-0"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td>NobleUI jQuery</td>
-                                <td>01/01/2022</td>
-                                <td>26/04/2022</td>
-                                <td><span class="badge bg-danger">Released</span></td>
-                                <td>Leonardo Payne</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>NobleUI Angular</td>
-                                <td>01/01/2022</td>
-                                <td>26/04/2022</td>
-                                <td><span class="badge bg-success">Review</span></td>
-                                <td>Carl Henson</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>NobleUI ReactJs</td>
-                                <td>01/05/2022</td>
-                                <td>10/09/2022</td>
-                                <td><span class="badge bg-info">Pending</span></td>
-                                <td>Jensen Combs</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>NobleUI VueJs</td>
-                                <td>01/01/2022</td>
-                                <td>31/11/2022</td>
-                                <td><span class="badge bg-warning">Work in Progress</span>
+                                <td>#01</td>
+                                <td>
+                                    <div class="user_media d-flex align-items-center pointer">
+                                        <div class="user_icon color_1">
+                                            <span>TN</span>
+                                        </div>
+                                        <div class="user_media">
+                                            <h6 class="text-body mb-0">Tiger Nixon</h6>
+                                        </div>
+                                    </div>
                                 </td>
-                                <td>Amiah Burton</td>
+                                <td>tigernixon@gmail.com</td>
+                                <td>+1 987 2455 3426</td>
+                                <td>
+                                    <div class="icon_user_block">
+                                        <div class="user_icon color_6" placement="top" ngbTooltip="Herrod Chandler">
+                                            HC
+                                        </div>
+                                        <div class="user_icon color_5" placement="top" ngbTooltip="Rhona Davidson">
+                                            RD
+                                        </div>
+                                        <div class="user_icon color_4" placement="top" ngbTooltip="Colleen Hurst">
+                                            CH
+                                        </div>
+                                        <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                            SF
+                                        </div>
+                                        <label placement="top" data-html="true" [ngbTooltip]="tipContent">+2 More</label>
+                                        <ng-template #tipContent>
+                                            Airi Satou<br> Brielle Williamson
+                                        </ng-template>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div ngbDropdown placement="bottom-end" class="btn-group">
+                                        <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                          <i class="ri-more-2-fill"></i>
+                                        </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                            <button class="dropdown-item">View Details</button>
+                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td>5</td>
-                                <td>NobleUI Laravel</td>
-                                <td>01/01/2022</td>
-                                <td>31/12/2022</td>
-                                <td><span class="badge bg-danger text-white">Coming soon</span></td>
-                                <td>Yaretzi Mayo</td>
+                                <td>#02</td>
+                                <td>
+                                    <div class="user_media d-flex align-items-center pointer">
+                                        <div class="user_icon color_2">
+                                            <span>GW</span>
+                                        </div>
+                                        <div class="user_media">
+                                            <h6 class="text-body mb-0">Garrett Winters</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>garrettwinters@gmail.com</td>
+                                <td>+1 987 2455 3426</td>
+                                <td>
+                                    <div class="icon_user_block">
+                                        <div class="user_icon color_4" placement="top" ngbTooltip="Colleen Hurst">
+                                            CH
+                                        </div>
+                                        <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                            SF
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div ngbDropdown placement="bottom-end" class="btn-group">
+                                        <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                          <i class="ri-more-2-fill"></i>
+                                        </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                            <button class="dropdown-item">View Details</button>
+                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td>6</td>
-                                <td>NobleUI NodeJs</td>
-                                <td>01/01/2022</td>
-                                <td>31/12/2022</td>
-                                <td><span class="badge bg-primary">Coming soon</span></td>
-                                <td>Carl Henson</td>
+                                <td>#04</td>
+                                <td>
+                                    <div class="user_media d-flex align-items-center pointer">
+                                        <div class="user_icon color_3">
+                                            <span>AC</span>
+                                        </div>
+                                        <div class="user_media">
+                                            <h6 class="text-body mb-0">Ashton Cox</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>ashtoncox@gmail.com</td>
+                                <td>+1 987 2455 3426</td>
+                                <td>
+                                    <div class="icon_user_block">
+                                        <div class="user_icon color_6" placement="top" ngbTooltip="Herrod Chandler">
+                                            HC
+                                        </div>
+                                        <div class="user_icon color_5" placement="top" ngbTooltip="Rhona Davidson">
+                                            RD
+                                        </div>
+                                        <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                            SF
+                                        </div>
+                                        <label placement="top" data-html="true" [ngbTooltip]="tipContent">+1 More</label>
+                                        <ng-template #tipContent>
+                                            Brielle Williamson
+                                        </ng-template>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div ngbDropdown placement="top-end" class="btn-group">
+                                        <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                          <i class="ri-more-2-fill"></i>
+                                        </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                            <button class="dropdown-item">View Details</button>
+                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td class="border-bottom">3</td>
-                                <td class="border-bottom">NobleUI EmberJs</td>
-                                <td class="border-bottom">01/05/2022</td>
-                                <td class="border-bottom">10/11/2022</td>
-                                <td class="border-bottom"><span class="badge bg-info">Pending</span></td>
-                                <td class="border-bottom">Jensen Combs</td>
+                                <td>#05</td>
+                                <td>
+                                    <div class="user_media d-flex align-items-center pointer">
+                                        <div class="user_icon color_4">
+                                            <span>CK</span>
+                                        </div>
+                                        <div class="user_media">
+                                            <h6 class="text-body mb-0">Cedric Kelly</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>cedrickelly@gmail.com</td>
+                                <td>+1 987 2455 3426</td>
+                                <td>
+                                    <div class="icon_user_block">
+                                        <div class="user_icon color_2" placement="top" ngbTooltip="Sonya Frost">
+                                            SF
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div ngbDropdown placement="top-end" class="btn-group">
+                                        <button class="btn btn-icon" id="dropupMenu" ngbDropdownToggle>
+                                          <i class="ri-more-2-fill"></i>
+                                        </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+                                            <button class="dropdown-item">View Details</button>
+                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
