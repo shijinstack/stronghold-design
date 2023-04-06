@@ -327,6 +327,16 @@ img.invert {
     display: flex;
 }
 
+.dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-item i {
+    color: #7987a1 !important;
+}
+
 @media screen and (max-width: 767px) {
     .company_head {
         flex-direction: column;
