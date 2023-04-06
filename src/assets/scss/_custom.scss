@@ -398,6 +398,16 @@ img.invert {
         border-left: none;
         padding-left: 0;
     }
+    .splitted_right {
+        border-right: none;
+    }
+    .splitted_left {
+        border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+    }
+    .splitted_grid {
+        display: block;
+        overflow: auto;
+    }
 }
 
 @media screen and (max-width: 460px) {
