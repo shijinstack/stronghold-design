@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   /**
   * Fixed header menu on scroll
   */
-  @HostListener('window:scroll', ['$event']) getScrollHeight() {    
+  @HostListener('window:scroll', ['$event']) getScrollHeight() {
     if (window.matchMedia('(min-width: 992px)').matches) {
       let header: HTMLElement = document.querySelector('.horizontal-menu') as HTMLElement;
       if(window.pageYOffset >= 60) {
@@ -33,20 +33,23 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   constructor(
-    @Inject(DOCUMENT) private document: Document, 
+    @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2,
     private router: Router,
-    
+
   ) { }
 
   ngOnInit(): void {
     this.menuItems = MENU;
 
+    if (this.router.routerState.snapshot.url === '/dashboard') {
+      this.industry = true;
+    }
     this.router.events.pipe(
       takeUntil(this.unsub$)
     ).subscribe((val) => {
-      // see also 
-      if(val instanceof NavigationEnd) {
+      // see also
+      if (val instanceof NavigationEnd) {
         if (val?.url === '/dashboard') {
           this.industry = true;
         } else {
@@ -99,5 +102,5 @@ export class NavbarComponent implements OnInit, OnDestroy {
     document.querySelector('.horizontal-menu .bottom-navbar')!.classList.toggle('header-toggled');
   }
 
-  
+
 }
