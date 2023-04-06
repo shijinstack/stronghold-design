@@ -249,6 +249,28 @@ td .dropdown-toggle.btn.btn-icon::after {
     justify-content: center;
 }
 
+.company_dash {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.company_icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.table-hover>tbody>tr:hover>* {
+    --bs-table-accent-bg: #f8f8fb;
+}
+
 @media screen and (max-width: 460px) {
     .user_media.large .user_media {
         flex-direction: column;
