@@ -19,6 +19,10 @@ export class RepresentativeComponent implements OnInit {
   selectedPersonId: string = '';
 
   selectedPeople: any = null;
+  clients: any = null;
+  selectedClients: any = null;
+  roles: any = null;
+  selectedRoles: any = null;
 
   constructor(private modalService: NgbModal) { }
 
@@ -44,6 +48,8 @@ export class RepresentativeComponent implements OnInit {
     this.simpleItems = ['India', 'USA', 'Japan'];
     this.simpleItems2 = ['Kerala', 'Tamilnadu', 'Karnataka'];
     this.people = PeoplesData.peoples;
+    this.clients = ['Valero', 'Marathon', 'Philips 66', 'ExxonMobil', 'Holly Frontier', 'Shell', 'Cenovus'];
+    this.roles = ['Role 1', 'Role 2', 'Role 3'];
     
   }
 

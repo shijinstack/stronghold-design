@@ -298,7 +298,7 @@ td .dropdown-toggle.btn.btn-icon::after {
 }
 
 img.invert {
-    filter: invert(100%);
+    // filter: invert(100%);
     height: auto !important;
     width: 25px !important;
     border-radius: 0 !important;
@@ -391,6 +391,9 @@ img.invert {
     box-shadow: none;
     padding: 0.4rem 1rem;
     font-size: 0.8rem;
+}
+.dropdown-item:active i, .dropdown-item:active svg, .dropdown-item.active i, .dropdown-item.active svg{
+    color: #fff !important;
 }
 
 @media screen and (max-width: 767px) {
