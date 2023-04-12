@@ -7,6 +7,8 @@ import { CompanyDetailsComponent } from './company-details.component';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { QuillModule } from 'ngx-quill';
+
 
 const routes: Routes = [
   {
@@ -26,6 +28,7 @@ const routes: Routes = [
     FormsModule,
     NgSelectModule,
     NgbTooltipModule,
+    QuillModule.forRoot(), // ngx-quill
     NgbDropdownModule
   ]
 })

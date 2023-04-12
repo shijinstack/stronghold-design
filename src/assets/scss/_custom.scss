@@ -380,13 +380,9 @@ img.invert {
 
 .fixed_box textarea {
     resize: none;
+    border: none;
 }
 
-.btn_textarea {
-    position: absolute;
-    bottom: 1.2rem;
-    right: 2.2em;
-}
 .company_label {
     box-shadow: none;
     padding: 0.4rem 1rem;
@@ -394,6 +390,48 @@ img.invert {
 }
 .dropdown-item:active i, .dropdown-item:active svg, .dropdown-item.active i, .dropdown-item.active svg{
     color: #fff !important;
+}
+.email_trigger {
+    cursor: pointer;
+}
+.email_trigger sup{
+    top: -0.2em;
+    color: $primary;
+}
+.date_time span{
+    font-weight: 400;
+}
+.date_time span strong{
+    font-weight: 500
+}
+.fixed_box{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+.modal_textfield{
+    flex: 1;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #dde0e2;
+    border-radius: 0.25rem;
+}
+.fixed_box .dropdown-toggle{
+    border: 1px solid $primary;
+    border-radius: 50%;
+    margin: 8px 10px 0 0;
+}
+.fixed_box .dropdown-toggle::after{
+    display: none;
+}
+.textfield_action{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+}
+.textfield_action .btn{
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 767px) {
