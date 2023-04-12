@@ -2,7 +2,7 @@
     <nav class="page-breadcrumb mb-1">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
-            <li class="breadcrumb-item"><a routerLink="/companies">Companies</a></li>
+            <li class="breadcrumb-item"><a routerLink="/companies">Clients</a></li>
             <li class="breadcrumb-item active" aria-current="page">Valero</li>
         </ol>
     </nav>
@@ -39,6 +39,10 @@
                 </div>
 
                 <div class="d-flex align-items-center flex-wrap text-nowrap title_action gap-1">
+                    <button type="button" class="btn btn-outline-warning add_btn">
+                        <i class="ri-bar-chart-horizontal-line"></i>
+                        Recent Activity
+                    </button>
                     <button type="button" class="btn btn-outline-danger add_btn">
                         <i class="ri-delete-bin-line"></i>
                             Delete
@@ -275,7 +279,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-4">
-                    <h6 class="card-title mb-0">Company Employee List</h6>
+                    <h6 class="card-title mb-0">Valero Contacts</h6>
                     <button type="button" class="btn btn-link">View All</button>
                 </div>
                 <div class="table-responsive">
@@ -286,7 +290,7 @@
                                 <th class="pt-0">Name</th>
                                 <th class="pt-0">Email</th>
                                 <th class="pt-0">Phone</th>
-                                <th class="pt-0">Linked Contacts</th>
+                                <th class="pt-0">Stronghold contacts</th>
                                 <th class="pt-0"></th>
                             </tr>
                         </thead>
@@ -300,6 +304,7 @@
                                         </div>
                                         <div class="user_media">
                                             <h6 class="text-body mb-0">Tiger Nixon</h6>
+                                            <span class="text-muted">Development Manager</span>
                                         </div>
                                     </div>
                                 </td>
@@ -347,6 +352,7 @@
                                         </div>
                                         <div class="user_media">
                                             <h6 class="text-body mb-0">Garrett Winters</h6>
+                                            <span class="text-muted">Technical Assistant</span>
                                         </div>
                                     </div>
                                 </td>
@@ -376,7 +382,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>#04</td>
+                                <td>#03</td>
                                 <td>
                                     <div class="user_media d-flex align-items-center pointer" (click)="openViewEmployeeModal(viewEmployeeModal)">
                                         <div class="user_icon color_3">
@@ -384,6 +390,7 @@
                                         </div>
                                         <div class="user_media">
                                             <h6 class="text-body mb-0">Ashton Cox</h6>
+                                            <span class="text-muted">Technical Analysis</span>
                                         </div>
                                     </div>
                                 </td>
@@ -420,7 +427,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>#05</td>
+                                <td>#04</td>
                                 <td>
                                     <div class="user_media d-flex align-items-center pointer" (click)="openViewEmployeeModal(viewEmployeeModal)">
                                         <div class="user_icon color_4">
@@ -428,6 +435,7 @@
                                         </div>
                                         <div class="user_media">
                                             <h6 class="text-body mb-0">Cedric Kelly</h6>
+                                            <span class="text-muted">Development Manager</span>
                                         </div>
                                     </div>
                                 </td>
@@ -478,8 +486,9 @@
                     <div class="user_media d-flex align-items-center">
                         <div class="flex-1">
                             <h5 class="modal-title">Tiger Nixon</h5>
-                            <p class="text-muted">tigernixon@gmail.com</p>
+                            <p class="text-muted">Development Manager</p>
                         </div>
+                        <label class="badge gradient_box_1 company_label">Valero</label>
                     </div>
                 </div>
                 <hr>
@@ -569,7 +578,7 @@
                     </div>
                 </div>
                 <div class="mt-3">
-                    <label class="tx-12 mb-0 text-uppercase display_label">Linked Contacts</label>
+                    <label class="tx-12 mb-0 text-uppercase display_label">Stronghold contacts</label>
                     <div class="d-flex flex-wrap gap-3 mt-3">
                         <div class="user_media d-flex align-items-center pointer">
                             <div class="user_icon color_6">
@@ -577,6 +586,7 @@
                             </div>
                             <div class="user_media">
                                 <h6 class="text-body mb-0">Leonardo Payne</h6>
+                                <span class="text-muted">Development Manager</span>
                             </div>
                         </div>
                         <div class="user_media d-flex align-items-center pointer">
@@ -585,6 +595,7 @@
                             </div>
                             <div class="user_media">
                                 <h6 class="text-body mb-0">Garrett Winters</h6>
+                                <span class="text-muted">Technical Assistant</span>
                             </div>
                         </div>
                         <div class="user_media d-flex align-items-center pointer">
@@ -593,6 +604,7 @@
                             </div>
                             <div class="user_media">
                                 <h6 class="text-body mb-0">Ashton Cox</h6>
+                                <span class="text-muted">Technical Analysis</span>
                             </div>
                         </div>
                         <div class="user_media d-flex align-items-center pointer">
@@ -601,6 +613,7 @@
                             </div>
                             <div class="user_media">
                                 <h6 class="text-body mb-0">Cedric Kelly</h6>
+                                <span class="text-muted">Development Manager</span>
                             </div>
                         </div>
                     </div>
@@ -615,7 +628,7 @@
                         <h5 class="modal-title">Recent Activity</h5>
                     </div>
                     <div class="d-flex align-items-center flex-wrap text-nowrap title_action gap-1">
-                        <button type="button" class="btn btn-outline-info mb-1 mb-md-0">Set Remainder</button>
+                        <button type="button" class="btn btn-outline-info mb-1 mb-md-0">Set Reminder</button>
                         <button type="button" class="btn btn-outline-warning mb-1 mb-md-0">Follow Up</button>
                     </div>
                 </div>

@@ -3,10 +3,10 @@
         <nav class="page-breadcrumb mb-1">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Companies</li>
+                <li class="breadcrumb-item active" aria-current="page">Clients</li>
             </ol>
         </nav>
-        <h3 class="mb-3 mb-md-0 page_title">Companies</h3>
+        <h3 class="mb-3 mb-md-0 page_title">Clients</h3>
     </div>
     <div class="d-flex align-items-center flex-wrap text-nowrap title_action gap-1">
         <button type="button" class="btn btn-outline-primary btn-icon-text dashfilter">
@@ -15,7 +15,7 @@
         </button>
         <button type="button" class="btn btn-primary add_btn" (click)="openAddCompanyModal(addCompanyModal)">
             <i class="ri-add-line"></i>
-            Add Company
+            Add Client
         </button>
     </div>
 </div>
@@ -23,7 +23,7 @@
 <div class="card">
     <div class="card-body">
         <div class="table_head">
-            <h6 class="card-title mb-0">Companies List</h6>
+            <h6 class="card-title mb-0">Clients List</h6>
             <div class="dataTable-top">
                 <div class="dataTable-dropdown">
                     <label>
@@ -47,8 +47,8 @@
                 <thead>
                     <tr>
                         <th width="100"><a class="dataTable-sorter">Sl.No</a></th>
-                        <th><a class="dataTable-sorter">Company Name</a></th>
-                        <th><a class="dataTable-sorter">Company ID</a></th>
+                        <th><a class="dataTable-sorter">Clients Name</a></th>
+                        <th><a class="dataTable-sorter">Clients ID</a></th>
                         <th><a class="dataTable-sorter">No of Refineries</a></th>
                         <th><a class="dataTable-sorter">BBLs/day </a></th>
                         <th><a class="dataTable-sorter">Currently In </a></th>
@@ -410,7 +410,7 @@
 <!-- Add Modal -->
 <ng-template #addCompanyModal let-modal>
     <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Company</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add Client</h5>
         <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
     </div>
     <div class="modal-body">
@@ -421,11 +421,11 @@
                 <i class="ri-upload-cloud-2-line"></i>
                 <label>Upload Logo</label>
             </div>
-            <label for="input12" class="form-label justify-content-center d-flex">Company Logo</label>
+            <label for="input12" class="form-label justify-content-center d-flex">Client Logo</label>
         </div>
 
         <div class="mb-4">
-            <label for="input1" class="form-label">Company Name <span class="text-danger">*</span></label>
+            <label for="input1" class="form-label">Client Name <span class="text-danger">*</span></label>
             <input type="text" name="firstname" class="form-control" id="input1" autocomplete="off" placeholder="first name">
         </div>
 
@@ -474,8 +474,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="mb-4">
-                    <label for="input8" class="form-label">Company ID <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="input8" autocomplete="off" placeholder="enter company id">
+                    <label for="input8" class="form-label">Client ID <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="input8" autocomplete="off" placeholder="enter client id">
                 </div>
             </div>
             <div class="col-md-6">
@@ -505,18 +505,18 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
-        <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Add Company</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Add Client</button>
     </div>
 </ng-template>
 
 <!-- Delete Modal -->
 <ng-template #deleteCompanyModal let-modal>
     <div class="modal-header border-none">
-        <h5 class="modal-title" id="exampleModalLabel">Delete Company</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Delete Client</h5>
         <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <p>Are you sure, you want to detete this company <strong>(Company Name)</strong>?</p>
+        <p>Are you sure, you want to detete this client <strong>(Client Name)</strong>?</p>
     </div>
     <div class="modal-footer border-none">
         <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>

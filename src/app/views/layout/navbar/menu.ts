@@ -7,7 +7,7 @@ export const MENU: MenuItem[] = [
     link: '/dashboard'
   },
   {
-    label: 'Companies',
+    label: 'Clients',
     icon: 'command',
     link: 'companies'
   },

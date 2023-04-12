@@ -387,6 +387,11 @@ img.invert {
     bottom: 1.2rem;
     right: 2.2em;
 }
+.company_label {
+    box-shadow: none;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+}
 
 @media screen and (max-width: 767px) {
     .company_head {

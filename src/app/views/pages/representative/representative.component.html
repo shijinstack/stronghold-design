@@ -50,7 +50,7 @@
                         <th><a class="dataTable-sorter">Name</a></th>
                         <th><a class="dataTable-sorter">Email Address</a></th>
                         <th><a class="dataTable-sorter">Phone Number</a></th>
-                        <th><a class="dataTable-sorter">Linked Contacts</a></th>
+                        <th><a class="dataTable-sorter">Stronghold contacts</a></th>
                         <th width="50"></th>
                     </tr>
                 </thead>
@@ -567,7 +567,7 @@
         </div>
 
         <div class="mb-4">
-            <label for="input13" class="form-label">Linked Contacts<span class="text-danger">*</span></label>
+            <label for="input13" class="form-label">Stronghold contacts<span class="text-danger">*</span></label>
             <ng-select [items]="people" [multiple]=true [closeOnSelect]="false" [searchable]="false" bindLabel="name" placeholder="Select people" [(ngModel)]="selectedPeople">
             </ng-select>
         </div>
@@ -687,7 +687,7 @@
             </div>
         </div>
         <div class="mt-3">
-            <label class="tx-12 mb-0 text-uppercase display_label">Linked Contacts</label>
+            <label class="tx-12 mb-0 text-uppercase display_label">Stronghold contacts</label>
             <div class="d-flex flex-wrap gap-3 mt-3">
                 <div class="user_media d-flex align-items-center pointer">
                     <div class="user_icon color_6">
