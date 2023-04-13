@@ -565,15 +565,9 @@
                 </div>
             </div>
         </div>
-
-        <div class="mb-4">
-            <label for="input13" class="form-label">Linked Contacts<span class="text-danger">*</span></label>
-            <ng-select [items]="people" [multiple]=true [closeOnSelect]="false" [searchable]="false" bindLabel="name" placeholder="Select people" [(ngModel)]="selectedPeople">
-            </ng-select>
-        </div>
         
         <div class="mb-4">
-            <label for="input13" class="form-label">Assign Clients<span class="text-danger">*</span></label>
+            <label for="input13" class="form-label">Assigned Clients<span class="text-danger">*</span></label>
             <ng-select [items]="clients" [multiple]=true [closeOnSelect]="false" [searchable]="false" bindLabel="name2" placeholder="Select clients" [(ngModel)]="selectedClients">
             </ng-select>
         </div>
@@ -581,6 +575,12 @@
         <div class="mb-4">
             <label for="input10" class="form-label">Role <span class="text-danger">*</span></label>
             <ng-select [items]="roles" [searchable]="false" [(ngModel)]="selectedRoles" placeholder="select role"></ng-select>
+        </div>
+
+        <div class="mb-4">
+            <label for="input13" class="form-label">Linked Contacts</label>
+            <ng-select [items]="people" [multiple]=true [closeOnSelect]="false" [searchable]="false" bindLabel="name" placeholder="Select people" [(ngModel)]="selectedPeople">
+            </ng-select>
         </div>
         <!-- </form> -->
     </div>
@@ -607,6 +607,7 @@
                     <h5 class="modal-title">James Andrews</h5>
                     <p class="text-muted">Marketing Manager</p>
                 </div>
+                <span class="badge bg-success">Super Admin</span>
             </div>
         </div>
         <hr>
@@ -695,6 +696,17 @@
                 </div>
             </div>
         </div>
+
+        <div class="mt-4">
+            <label class="tx-12 mb-0 text-uppercase display_label">Assigned Clients</label>
+            <div class="d-flex flex-wrap gap-3 mt-3">
+                <label class="badge gradient_box_1 company_label">Marathon</label>
+                <label class="badge gradient_box_2 company_label">Philips 66</label>
+                <label class="badge gradient_box_3 company_label">ExxonMobil</label>
+                <label class="badge gradient_box_4 company_label">Holly Frontier</label>
+            </div>
+        </div>
+
         <div class="mt-3">
             <label class="tx-12 mb-0 text-uppercase display_label">Linked Contacts</label>
             <div class="d-flex flex-wrap gap-3 mt-3">
@@ -735,21 +747,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="mt-4">
-            <label class="tx-12 mb-0 text-uppercase display_label">Assign Clients</label>
-            <div class="d-flex flex-wrap gap-3 mt-3">
-                <label class="badge gradient_box_1 company_label">Marathon</label>
-                <label class="badge gradient_box_2 company_label">Philips 66</label>
-                <label class="badge gradient_box_3 company_label">ExxonMobil</label>
-                <label class="badge gradient_box_4 company_label">Holly Frontier</label>
-            </div>
-        </div>
-
-        <div class="mt-3">
-            <label class="tx-12 mb-0 text-uppercase display_label">Role</label>
-            <p class="text-muted">Super Admin</p>
         </div>
 
     </div>

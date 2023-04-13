@@ -21,4 +21,8 @@ export const MENU: MenuItem[] = [
     icon: 'settings',
     link: '/portal-users'
   },
+  {
+    label: 'Role Management',
+    icon: 'user-check',
+  },
 ];
