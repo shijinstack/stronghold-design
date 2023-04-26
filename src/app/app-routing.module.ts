@@ -33,6 +33,10 @@ const routes: Routes = [
         loadChildren: () => import('./views/pages/company-details/company-details.module').then(m => m.CompanyDetailsModule)
       },
       {
+        path: 'company-region',
+        loadChildren: () => import('./views/pages/company-region/company-region.module').then(m => m.CompanyRegionModule)
+      },
+      {
         path: 'apps',
         loadChildren: () => import('./views/pages/apps/apps.module').then(m => m.AppsModule)
       },
